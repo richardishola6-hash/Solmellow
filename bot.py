@@ -5,9 +5,6 @@ from telebot import types
 # 🔐 Replace this with your new Telegram Bot Token
 BOT_TOKEN = "7004858190:AAFTOL_ll9ta99ReyW_kYUbzT0VP6gR7M2A"
 
-# 🪙 Replace with your meme coin contract address
-COIN_CA = "9ZxaJ6XiTEJ3KTQTxokHK4Ekg9MAdxxLNfxScXQfpump"
-
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # 🏁 Command: /start
@@ -23,7 +20,7 @@ def start(message):
 @bot.message_handler(commands=['price'])
 def get_price(message):
     try:
-        url = f"https://api.dexscreener.com/latest/dex/tokens/{COIN_CA}"
+        url = f"https://dexscreener.com/solana/ap5cyvzjbqliw5lq8zaynnsygbdeddxvcwqanxahwojx"
         response = requests.get(url)
         data = response.json()
 
